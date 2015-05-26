@@ -1,0 +1,22 @@
+############################# Paste this in your controller #######################
+'use strict';
+
+angular.module("emailApp")
+    .controller('HeaderCtrl', function($scope, $location){
+    
+    //Check which link is active and accordingly highlight the button
+    $scope.isActive = function(viewLocation){
+        return (viewLocation === $location.path());
+    }    
+});
+
+
+################## This goes in your view / HTML template #########################
+        <div class="header" ng-controller="HeaderCtrl">
+            <ul class="nav nav-pills pull-right">
+                <li ng-class="{active:isActive('/')}"><a ng-href="#">Home</a></li>
+                <li ng-class="{active:isActive('/about')}"><a ng-href="#/about">About</a></li>
+                <li ng-class="{active:isActive('/product')}"><a ng-href="#/product">Product</a></li>
+                <li ng-class="{active:isActive('/news')}"><a ng-href="#/news">News</a></li>
+                <li ng-class="{active:isActive('/contact')}"><a ng-href="#/contact">Contact</a></li>            
+            </ul>
