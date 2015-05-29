@@ -7,6 +7,9 @@ window.onload = function(){
 	AddMe("div","This content comes in 'DIV'","theP");
 }
 
+//TagName = New HTML Tag you want to add
+//TagContent = The content inside new tag
+//ParentName = The DOM element inside which you want to create new tag
 var AddMe = function (TagName,TagContent,ParentName){
 	var node,text;
 	node = document.createElement(TagName);
