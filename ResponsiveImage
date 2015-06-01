@@ -4,11 +4,11 @@
 
 # In <picture> we need to do the hard task of DPR and all..
 <picture>
-  <source media="(min-width: 40em)" srcset="img_big.jpg 1x, img_big-hd.jpg 2x">
-  <source srcset="img_small.jpg 1x, img_hd.jpg 2x">
-  <img src="img_fallback.jpg" alt="">
+    <source media="(min-width: 40em)" srcset="img_big.jpg 1x, img_big-hd.jpg 2x">
+    <source srcset="img_small.jpg 1x, img_hd.jpg 2x">
+    <img src="img_fallback.jpg" alt="">
 </picture>
 
 #In SRCSET it takes care of it, all by itself..
-<img src="small.jpg" srcset="medium.jpg 900w, large.jpg 1200w">
+    <img src="small.jpg" srcset="medium.jpg 900w, large.jpg 1200w">
 
