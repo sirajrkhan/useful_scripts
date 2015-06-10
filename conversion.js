@@ -16,8 +16,9 @@
             console.log('invalid input');
         }
     }
-    
-    //executing
+      
+    //Command line would work like this: node conversion.js[space][temperature][space][unit]
+    //Example: "node conversion.js 42 C"
     con(wUnit,wNum);
     
 })();
