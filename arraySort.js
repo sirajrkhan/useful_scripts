@@ -3,7 +3,9 @@
 (function(){
 
     //accessing the command line parameters
-    var param = new Array(process.argv[2]);
+    var param = process.argv[2];
+    param = param.split(",");
+    
     //var strArray = ['Apple','Orange','Mango','Banana','Guava'];
     //var numArray = [21,1,101,40,301];
 
@@ -29,6 +31,8 @@
             }
         }
     }
+    
+    //makeshift solution for 
 
     //Command line would work like this: node arraySort.js[space][array]
     //Example: "node arraySort.js [1,3,6,2]"
