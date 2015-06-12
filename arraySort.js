@@ -2,16 +2,19 @@
 
 (function(){
 
-    //accessing the command line parameters
-    var param = process.argv[2];
-    param = param.split(",");
-    
+    //Dummy data for checking
     //var strArray = ['Apple','Orange','Mango','Banana','Guava'];
     //var numArray = [21,1,101,40,301];
 
+    //accessing the command line parameter
+    //Expectation: "node arraySort.js [1,3,6,2]"
+    var param = process.argv[2];
+    
     //check for String for Numeric Array and sort accordingly
     var iSort = function(a){
-        if (chkNum(a) === false){
+        if (!param || false === (param instanceof Array)){
+            console.log ('invalid or no parameters');
+        }else if (chkNum(a) === false){
             a.sort(); 
             console.log(a.toString());
         } else{
@@ -32,10 +35,14 @@
         }
     }
     
-    //makeshift solution for 
+    //makeshift solution for converting the command-line inputs to array
+    //takes input as string and returns array
+    var makeArr = function (str){
+        str = str.split(",");
+        console.log(str);
+    }
 
     //Command line would work like this: node arraySort.js[space][array]
-    //Example: "node arraySort.js [1,3,6,2]"
     iSort(param);
 
 })();
