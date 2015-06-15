@@ -3,7 +3,7 @@
 (function(){
 
     //Dummy data for checking
-    //var strArray = ['Apple','Orange','Mango','Banana','Guava'];
+    var strArray = "['Apple','Orange','Mango','Banana','Guava']";
     //var numArray = [21,1,101,40,301];
 
     //accessing the command line parameter
@@ -38,11 +38,16 @@
     //makeshift solution for converting the command-line inputs to array
     //takes input as string and returns array
     var makeArr = function (str){
+        
+        str = str.substring(1,str.length-1);
         str = str.split(",");
-        console.log(str);
+        console.log( str instanceof Array);
+        console.log(str.toString())
     }
+    
+    makeArr(strArray);
 
     //Command line would work like this: node arraySort.js[space][array]
-    iSort(param);
+    //iSort(param);
 
 })();
